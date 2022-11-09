@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd"
+>
+    <default>
+        <mts>
+            <configs_demo>
+                <my_boolean>1</my_boolean>
+                <my_integer>-1</my_integer>
+                <my_string>hi!</my_string>
+                <my_table>
+                    <![CDATA[
+{
+  "_1664468236724_724": {
+    "key": "Key 1",
+    "value": "Value 1"
+  },
+  "_1664468497653_653": {
+    "key": "Key 2",
+    "value": "Value 2"
+  }
+}
+                    ]]>
+                </my_table>
+                <my_password backend_model="Magento\Config\Model\Config\Backend\Encrypted"/>
+            </configs_demo>
+        </mts>
+    </default>
+</config>

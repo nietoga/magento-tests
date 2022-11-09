@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_register_success">
+        <observer name="email_customer_support" instance="Agusquiw\CustomerRegistration\Observer\EmailCustomerSupport"/>
+        <observer name="log_details" instance="Agusquiw\CustomerRegistration\Observer\LogDetails"/>
+    </event>
+</config>

@@ -1,0 +1,20 @@
+version: '2'
+services:
+  db:
+    hostname: db.dish.docker
+    image: 'mariadb:10.4'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=magento2
+    ports:
+      - '3306:3306'
+    volumes:
+      - './db/config:/etc/mysql/conf.d'
+      - 'data:/var/lib/mysql'
+  elasticsearch:
+    hostname: elasticsearch.dish.docker
+    image: 'magento/magento-cloud-docker-elasticsearch:7.9-1.2.2'
+    ports:
+      - '9200:9200'
+volumes:
+  data:

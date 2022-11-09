@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="config">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="warehouses" type="warehouses_list" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="warehouses_list">
+        <xs:sequence>
+            <xs:element name="warehouse" type="warehouse_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="warehouse_type">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="postcode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

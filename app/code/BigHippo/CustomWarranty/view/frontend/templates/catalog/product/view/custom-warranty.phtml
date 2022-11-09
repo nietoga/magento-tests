@@ -1,0 +1,14 @@
+<?php
+/**
+ * @var \Magento\Catalog\Block\Product\View $block
+ */
+
+$blockId = $block->getProduct()->getCustomWarrantyBlock();
+?>
+
+<div class="custom-warranty">
+    <?php if ($blockId): ?>
+        <?php $customWarrantyBlock = $block->getLayout()->createBlock('Magento\Cms\Block\Block'); ?>
+        <?php echo $customWarrantyBlock->setBlockId($blockId)->toHtml(); ?>
+    <?php endif; ?>
+</div>

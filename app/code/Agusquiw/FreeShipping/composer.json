@@ -1,0 +1,22 @@
+{
+    "name": "agusquiw/module-free-shipping",
+    "description": "Add freeshipping notices in pdp",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "7.4.*",
+        "../../../../vendor/magento/framework":"103.0.*",
+        "../../../../vendor/magento/module-customer":"103.0.*",
+        "../../../../vendor/magento/module-catalog":"104.0.*"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Agusquiw\\FreeShipping\\": ""
+        }
+    }
+}
