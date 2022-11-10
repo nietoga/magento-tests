@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="MyLoggerHandler01" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/my_log01.log</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="MyLoggerHandler02" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/my_log02.log</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="MyLogger01" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="my_handler" xsi:type="object">MyLoggerHandler01</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="MyLogger02" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="my_handler" xsi:type="object">MyLoggerHandler02</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="MyTimeLogger01" type="Mts\VirtualLogger\Cron\TimeLogger">
+        <arguments>
+            <argument name="logger" xsi:type="object">MyLogger01</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="MyTimeLogger02" type="Mts\VirtualLogger\Cron\TimeLogger">
+        <arguments>
+            <argument name="logger" xsi:type="object">MyLogger02</argument>
+        </arguments>
+    </virtualType>
+</config>

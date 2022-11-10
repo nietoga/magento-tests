@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mts" translate="label" sortOrder="200">
+            <label>MTS</label>
+        </tab>
+
+        <section id="mts" translate="label" type="text" sortOrder="10"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>MTS</label>
+            <tab>mts</tab>
+
+            <!-- Just reuse a previously created resource -->
+            <resource>Magento_Config::web</resource>
+
+            <group id="virtual_logger" translate="label" type="text" sortOrder="1"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Virtual Logger</label>
+
+                <field id="my_time_logger02_cron" translate="label" type="text" sortOrder="1"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>My Time Logger 02 Cron</label>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

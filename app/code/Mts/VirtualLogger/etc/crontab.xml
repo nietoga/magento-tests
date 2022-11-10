@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="mts_virtual_logger_time_logger01" instance="MyTimeLogger01" method="logCurrentTime">
+            <schedule>* * * * *</schedule>
+        </job>
+
+        <job name="mts_virtual_logger_time_logger02" instance="MyTimeLogger02" method="logCurrentTime">
+            <config_path>mts/virtual_logger/my_time_logger02_cron</config_path>
+        </job>
+    </group>
+</config>

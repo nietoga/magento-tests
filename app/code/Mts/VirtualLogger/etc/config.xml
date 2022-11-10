@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mts>
+            <virtual_logger>
+                <my_time_logger02_cron>*/2 * * * *</my_time_logger02_cron>
+            </virtual_logger>
+        </mts>
+    </default>
+</config>
