@@ -474,6 +474,10 @@ return [
         'BigHippo_CustomWarranty' => 1,
         'BigHippo_MyContact' => 1,
         'Mts_ConfigsDemo' => 1,
+        'Mts_ContactValidation' => 1,
+        'Mts_Tests' => 1,
+        'Mts_VirtualLogger' => 1,
+        'Mts_VirtualPrinter' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1
