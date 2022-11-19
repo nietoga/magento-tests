@@ -10,6 +10,7 @@
     <body>
         <referenceContainer name="content">
             <block name="mts_tests.counter" template="Mts_Tests::counter.phtml"/>
+            <block name="mts_tests.rainbow" template="Mts_Tests::rainbowClick.phtml"/>
         </referenceContainer>
     </body>
 </page>
