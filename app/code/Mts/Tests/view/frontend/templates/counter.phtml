@@ -1,0 +1,17 @@
+<div data-bind="scope: 'mts-counter'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "mts-counter": {
+                        "component": "Mts_Tests/js/counter"
+                    }
+                }
+            }
+        }
+    }
+</script>
