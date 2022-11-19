@@ -13,7 +13,9 @@ define(['jquery'], ($) => {
     $.widget('mage.rainbowClick', {
         options: {},
         _create: function () {
-            $(this.element).click(function () {
+            const $element = $(this.element);
+            $element.css('user-select', 'none');
+            $element.click(function () {
                 $(this).css('color', getRandomColor());
             });
         },
