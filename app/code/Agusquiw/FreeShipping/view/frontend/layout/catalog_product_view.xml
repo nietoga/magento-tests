@@ -4,6 +4,8 @@
         <referenceContainer name="product.info.price">
             <block class="Magento\Framework\View\Element\Template" name="product.info.free-shipping"
                    template="Agusquiw_FreeShipping::catalog/product/view/free-shipping.phtml" after="product.price.final"/>
+            <block class="Magento\Framework\View\Element\Template" name="product.info.free-shipping-amd"
+                   template="Agusquiw_FreeShipping::catalog/product/view/free-shipping-amd.phtml" after="product.price.final"/>
         </referenceContainer>
     </body>
 </page>
